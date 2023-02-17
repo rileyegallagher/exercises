@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="en">   
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="SVG exercise">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Example: Animating SVG Images with CSS and JS</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<link href="/css/style.css" rel="stylesheet" >
+    <style>
+        #shape {
+        /* student: you might have to change this width value */
+            width: 70px;
+            height: auto;
+            cursor: pointer;
+            border: 1px solid #006837;
+            border-radius: 5px;
+            background: cornsilk;
+            transition: .5s ease-in-out;
+        }
+
+        hr {
+            border-top: 2px dashed #444;
+        }
+
+        .animate {
+        /* student: this transform flips the image */
+           /* transform-style: preserve-3d;
+            transform: rotateY(180deg);*/
+            
+      /* student: see some other ideas below */
+      
+       	/* rotate over */
+           /* transform: rotate(180deg);*/
+
+        /*get small*/
+           /*  transform: scale(.5);*/
+			
+        /*scoot away*/
+           /* transform: translate(800px,30px);*/
+           
+        /*COMBINING example, scoot away and get small */
+        	 transform: translate(800px,30px) scale(0);  
+           
+        }
+
+        #message {
+            display: none;
+        }
+
+    </style>
+<link href="/css/style.css">	
+</head>
+
+<body>
+<nav id="mine" class="navbar bg-primary navbar-expand-lg" data-bs-theme="dark">
+  <div class="container-fluid">
+  
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/index.html" >Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/01-example/index.html">Example 1</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/02-example/index.html">Example 2</a>
+        </li>
+        <li class="nav-item">
+			<a class="nav-link" href="/03-example/index.html">Example 3<sup>*</sup></a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="/04-example/index.html">Example 4<sup>*</sup></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    <main class="container p-5 mb-4 bg-light rounded-3 mt-3">
+		<h1>Example 1</h1>	
+        <p class="lead text-center">Banish bedbugs from your house: 
+  
+<!-- student: the svg should have an id of "shape" -->  
+ <svg id="shape" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 516.19 491.19"><defs><style>.cls-1{fill:#010101;}</style></defs><path class="cls-1" d="M229.64,153.18a31.35,31.35,0,0,1-16-3.88c0,.16,0,.65,0,.81,0,6,6.41,15,16.32,22.76,9.69,7.59,20.92,12.74,28.1,12.89,15.12-.31,44.42-21.72,44.42-35.59,0-.16,0-.72,0-.88h0a31.46,31.46,0,0,1-16,3.89Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M229.88,98.49h56.41c10.39,0,18.82,10.4,18.82,18.83v5a18.82,18.82,0,0,1-18.82,18.82H229.88c-10.4,0-18.83-10.39-18.83-18.82v-5A18.83,18.83,0,0,1,229.88,98.49Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M168.52,209.44c-16.27,18.16-28.25,40.63-35.14,65.38,1.72,1.57,9.45,6.68,39.85,10.71,23,3.06,53.18,4.74,84.94,4.74s61.93-1.68,84.94-4.75c29.66-3.93,37.74-8.89,39.71-10.58-6.89-24.8-18.88-47.32-35.17-65.5-12.52,19.58-47.39,33.32-89.57,33.32S181,229,168.52,209.44Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M176.67,193.32c0,8.68,8,17.58,22.08,24.42,15.74,7.67,36.81,11.9,59.33,11.9s43.6-4.22,59.34-11.89c14-6.83,22.08-15.71,22.08-24.39,0-10.16-11-20.38-29-27.39-4.94,7.88-12.22,14.26-16.22,17.39-9.33,7.32-23.33,15.1-35.25,15.62-.2,0-.41.14-.61.14h-.65c-.21,0-.41-.11-.62-.13-11.92-.53-25.92-8.5-35.25-15.82-4-3.13-11.28-9.41-16.21-17.29-18,7-29,17.28-29,27.44Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M230,75.4c0,3.54,2.4,6.69,6.65,10h42.84c4.25-3.28,6.65-6.43,6.65-10,0-4-4.93-8.69-13.53-12.71h0A91.39,91.39,0,0,0,258,57.45c-9.71,2.32-28,9.38-28,18Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M389.57,324.86A189.52,189.52,0,0,0,386,288.35c-7.57,3.88-19.47,6.84-36.39,9.33C325.45,301.24,293,303,258.17,303h0c-34.8,0-67.28-1.78-91.47-5.35-17-2.5-29-5.45-36.53-9.38h0a189.92,189.92,0,0,0-3.56,36.54c0,1.68,0,3.35.09,5,4,2.46,15.2,6.89,45.14,10.51,23.89,2.88,54.5,4.21,86.26,4.21h.62c32,0,62.76-1.39,86.63-4.32,29.14-3.59,40.13-7.91,44.15-10.39.05-1.68.08-3.32.08-5Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M258.54,422.24h-.13c-36.08,0-78.28-2.89-105-10.32h0a215,215,0,0,0,37.36,42.24c27.67,9.45,108,9.55,136.37.17a202.15,202.15,0,0,0,37-42.59c-26.73,7.54-69.34,10.5-105.68,10.5Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M304.64,472.09a392.83,392.83,0,0,1-45.48,2.46A392.89,392.89,0,0,1,213.28,472a283.09,283.09,0,0,0,44.89,26.24,265.44,265.44,0,0,0,46.47-26.19Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M388.38,344.59c-33.64,12.62-112.15,13.13-129.66,13.13h-.43c-18.41,0-96.76-.41-130.39-13h0A154.64,154.64,0,0,0,143.08,394c16,9,61.66,15.15,115.32,15.15h.13c53.72,0,99.49-6.07,115.55-15.1a158.06,158.06,0,0,0,14.29-49.43Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M130.58,255.89,90,249.21a6.56,6.56,0,0,0-7.58,5.67L60.92,429.18l-31,21.92a6.56,6.56,0,0,0,7.58,10.72l33.34-23.61h0a6.54,6.54,0,0,0,2.72-4.55L94.65,263.27l33.79,5.58a6.56,6.56,0,0,0,2.14-13Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M442.59,433.66a6.54,6.54,0,0,0,2.71,4.55l33.34,23.6h0a6.56,6.56,0,0,0,7.58-10.72l-31-21.93-21.54-174.3h0a6.56,6.56,0,0,0-7.59-5.67l-40.53,6.68h0a6.57,6.57,0,0,0,2.13,13l33.79-5.58Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M394,140.62l-55.81,31.17a6.56,6.56,0,1,0,6.4,11.46l50.68-28.31,59.15,83h0a6.59,6.59,0,0,0,4.58,2.71l49.9,5.87h0a6.52,6.52,0,0,0,7.32-6.14,6.56,6.56,0,0,0-5.79-6.89l-47-5.54-60.89-85.38h0a6.57,6.57,0,0,0-8.55-1.92Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M6.55,244.5a5.11,5.11,0,0,0,.78-.05l49.9-5.87h0A6.58,6.58,0,0,0,61.75,236L122,154l50.75,28.36h0a6.56,6.56,0,0,0,6.4-11.46l-55.8-31.17a6.56,6.56,0,0,0-8.49,1.84l-62,84.31L5.8,231.42a6.56,6.56,0,0,0,.75,13.08Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M347.4,108.84l-36.91,12.44a6.56,6.56,0,1,0,4.18,12.43l39.27-13.22a6.62,6.62,0,0,0,3.6-3l25.78-44.94,41.66-28a6.56,6.56,0,1,0-7.32-10.89L374.74,62.55a6.54,6.54,0,0,0-2,2.18Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M91.2,44.58l41.65,28,25.78,45h0a6.62,6.62,0,0,0,3.28,2.85l39.27,15.48A6.56,6.56,0,1,0,206,123.65L168.86,109,143.47,64.73a6.43,6.43,0,0,0-2-2.18L98.52,33.69a6.56,6.56,0,1,0-7.33,10.89Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M273.88,62.2a6.55,6.55,0,0,0,9.25-.74l11.07-13,74.56-28.65a6.56,6.56,0,1,0-4.7-12.25L287.93,36.83h0a6.68,6.68,0,0,0-2.64,1.87L273.14,53a6.55,6.55,0,0,0,.74,9.25Z" transform="translate(0.01 -7.09)"/><path class="cls-1" d="M147.41,19.83,222,48.48l11.07,13A6.56,6.56,0,0,0,243,53L230.87,38.69a6.48,6.48,0,0,0-2.63-1.87L152.11,7.58a6.56,6.56,0,1,0-4.7,12.25Z" transform="translate(0.01 -7.09)"/></svg>
+        <hr>
+        <div id="message" class="hide alert alert-info" role="alert">
+            <ul>
+                <li>Call the exterminator</li>
+                <li>Put your clothes in the dryer at high heat.</li>
+            </ul>
+        </div>
+         <p><button id="reset">Reset</button></p>       
+        <script>
+            const shape = document.getElementById("shape");
+            const message = document.getElementById("message");
+            message.classList.replace("show", "hide");
+            shape.addEventListener("click", () => {
+
+                if (message.style.display == 'block') {
+                    message.style.display = 'none';
+                    shape.style.background = "cornsilk";
+                } else {
+                    message.style.display = 'block';
+                    shape.style.background = "#cff4fc";
+                }
+                shape.classList.toggle("animate");
+                console.log("clicked");
+
+            });
+            const reset = document.getElementById("reset");
+            reset.addEventListener("click", () => {
+               shape.classList.toggle("animate"); 
+                  message.style.display = 'none';
+                shape.style.background = "cornsilk";
+             }); 
+        </script>
+    </main>
+</body>
+
+</html>
