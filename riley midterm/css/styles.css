@@ -8,8 +8,8 @@ background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/sv
 }
 
 header.my-background {
-  background-image: /*url(https://www.jefferson.edu/content/academic/index/jcr%3acontent/root/article/upper_iparsys/home_hero/backgroundImage.img.jpg/1676575858168.jpg);*/
-	url(https://via.placeholder.com/1280x853/e1e1e1/000000.jpg?text=This+is+a+background+image);
+  background-image:url(../images/jefferson%20meeting.jpeg);
+	/*url(https://via.placeholder.com/1280x853/e1e1e1/000000.jpg?text=This+is+a+background+image);*/
   background-size: cover;
   background-position: center;
 }
