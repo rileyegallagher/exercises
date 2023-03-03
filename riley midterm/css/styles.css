@@ -1,6 +1,6 @@
 body{ 
 /* yo student - this is the way to override a css custom property */  
-   --bs-primary-rgb: 13, 110, 253;
+   --bs-primary-rgb: #a41e22;
 }
 /* yo student */
 #mine  span.navbar-toggler-icon {
@@ -20,5 +20,8 @@ header.my-background {
   }
 }
 header .teaser {
-  background-color: rgba(000, 000, 000, 0.6);
+  background-color: #a41e22;
+}
+.navbar-brand img{
+    height: 40px
 }
