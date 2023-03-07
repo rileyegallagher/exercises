@@ -1,6 +1,6 @@
 body{ 
 /* yo student - this is the way to override a css custom property */  
-   --bs-primary-rgb: #a41e22;
+   --bs-primary-rgb: 00, 00, 000;
 }
 /* yo student */
 #mine  span.navbar-toggler-icon {
@@ -8,7 +8,7 @@ background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/sv
 }
 
 header.my-background {
-  background-image:url(../images/jefferson%20meeting.jpeg);
+  background-image:url(../images/Screen%20Shot%202023-03-02%20at%207.17.38%20PM.png);
 	/*url(https://via.placeholder.com/1280x853/e1e1e1/000000.jpg?text=This+is+a+background+image);*/
   background-size: cover;
   background-position: center;
@@ -22,6 +22,6 @@ header.my-background {
 header .teaser {
   background-color: #a41e22;
 }
-.navbar-brand img{
+.navbar-brand img{ 
     height: 40px
 }
